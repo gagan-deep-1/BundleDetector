@@ -1,7 +1,8 @@
 from sklearn.metrics import f1_score
 import pandas
 data = pandas.read_csv('output/flaggedBundle.csv')
-y_true = list(map(int, data["pred_flag"].tolist()))
+data1 = pandas.read_csv('output/bundles.csv')
+y_true = list(map(int, data1["bundle flag"].tolist()))
 y_pred = list(map(int, data["treu_flag"].tolist()))
 for i in y_pred:
     if i!=1:
